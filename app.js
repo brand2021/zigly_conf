@@ -34,18 +34,18 @@ io.on("connection", (socket) => {
     });
   });
 });
-const result = dotenv.config()
-if (result.error) {
-  throw result.error
-}
-console.log(result.parsed);
+// const result = dotenv.config()
+// if (result.error) {
+//   throw result.error
+// }
+// console.log(result.parsed);
 // const db = require('db')
 // db.connect({
 //   host: process.env.DB_HOST,
 //   username: process.env.DB_USER,
 //   password: process.env.DB_PASS
 // })
-const PORT = result.parsed.PORT||5000;
+const PORT = process.env.PORT||5000;
 server.listen(PORT, ()=>{
   console.log('Server is started on', PORT);
 });
