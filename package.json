@@ -1,10 +1,11 @@
 {
   "name": "zigly_conf",
-  "version": "1.0.0",
-  "description": "video conferencing with zigly doctor and petient",
-  "main": "server.js",
+  "version": "1.0.1",
+  "description": "video-conference-chat, one-to-one, one-to-many",
+  "main": "app.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "nodemon app.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -31,11 +32,12 @@
   },
   "homepage": "https://github.com/brand2021/zigly_conf#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "nodemon": "^2.0.12",
-    "socket.io": "^2.3.0",
+    "nodemon": "^2.0.15",
     "peer": "^0.6.1",
+    "socket.io": "^2.3.0",
     "uuid": "^8.3.2"
   }
 }
